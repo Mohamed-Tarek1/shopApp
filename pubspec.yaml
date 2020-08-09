@@ -1,0 +1,27 @@
+name: task
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  flutter_rating_bar: ^3.0.1+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/true.png
+  fonts:
+    - family: VesperLibre
+      fonts:
+        - asset: lib/assets/fonts/VesperLibre-Bold.ttf
