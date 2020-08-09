@@ -3,6 +3,10 @@ import 'conestants.dart';
 import 'stars_rate.dart';
 
 class HomePage extends StatelessWidget {
+  final String shop_name ,type;
+  final  address;
+  final NetworkImage url;
+  HomePage({this.shop_name,this.address,this.type,this.url});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,29 +20,27 @@ class HomePage extends StatelessWidget {
             color: Color.fromRGBO( 223, 223, 223,0.9),
             height: MediaQuery.of(context).size.height*0.45,
             width: double.infinity,
-          ),gg
+          ),
           Positioned(
             left: 15.0,
             top: 60.0,
             child: CircleAvatar(radius: 80.0 ,
-              backgroundImage: NetworkImage(
-                'https://picsum.photos/250?image=9',
-              ),
+              backgroundImage: url,
             ),
           ),
           Positioned(
               top: 110.0,
               left: 150.0,
-              child :Text('Desses',style: labelKc(20.0),))
+              child :Text('$type',style: labelKc(20.0),))
           ,Positioned(
               top: 145.0,
               left: 180,
-              child :Text('Cairo, Attaba',style: labelKc(25.0),))
+              child :Text('$address',style: labelKc(25.0),))
           ,
           Positioned(
               top: 180.0,
               left: 45,
-              child :Text('Shop Name',style: labelKc(50.0),))
+              child :Text('$shop_name',style: labelKc(50.0),))
           ,
 
           Positioned(
@@ -76,11 +78,11 @@ class HomePage extends StatelessWidget {
             top: 255,
             child: likes(3000),
           ),
-        Positioned(
-          right:20,
-          top: 50,
-          child: StarsRate(),
-        )
+          Positioned(
+            right:20,
+            top: 50,
+            child: StarsRate(),
+          )
 
         ],
       ) ,
