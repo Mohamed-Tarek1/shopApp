@@ -39,3 +39,16 @@ Widget likes (int likesNums) {
     ],
   );
 }
+
+Positioned collection(double x,double y , double size, String url ) {
+  return Positioned(
+    left: x,
+    bottom: y ,
+    child: Image(
+      width: size,
+      
+      image: NetworkImage(url),
+    ),
+  );
+}
+
